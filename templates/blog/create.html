@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title1%}
+Create a post
+{% endblock %}
+
+{% block background %}
+
+{% endblock %}
+
+{% block title2%}
+Homepage
+{% endblock %}
+
+{% block content%}
+<form method="post">
+  <label> Title </label>
+  <input type="text" name="title">
+  <label> Message </label>
+  <input type="text" name="body">
+  <!-- name is the key -->
+  <input type="submit"></input>
+
+</form>
+{% endblock %}
