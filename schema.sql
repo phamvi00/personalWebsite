@@ -1,0 +1,20 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS posts;
+
+CREATE TABLE users(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  -- PRIMARY KEY: way to reference a table
+  username TEXT NOT NULL,
+  password TEXT NOT NULL,
+  email TEXT,
+  bio TEXT,
+  avatar TEXT
+);
+
+CREATE TABLE posts(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  body TEXT NOT NULL,
+  dateCreated TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  id_author INTEGER NOT NULL REFERENCES users
+);
